@@ -309,3 +309,62 @@ h2 .caret {
     }
 }
 
+@media screen and (max-width: 430px) {
+    .prf-container .landing {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    .prf-container .landing .landing-left {
+        align-items: center;
+        padding: 0 1rem;
+        margin-left: 0;
+    }
+
+    .prf-container .landing h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .prf-container .landing h2 .typing-text {
+        font-size: 2.5rem;
+    }
+
+    .prf-container .landing .landing-left .ht {
+        font-size: 1.5rem;
+    }
+
+    .prf-container .landing button {
+        width: 7rem;
+        height: 2.2rem;
+        font-size: 0.9rem;
+    }
+
+    .prf-container .about-container {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .prf-container .about-left {
+        width: 100%;
+    }
+
+    .prf-container .about-container .about-right {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .profile-skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .follow-me-container {
+        display: none;
+    }
+}
+
+

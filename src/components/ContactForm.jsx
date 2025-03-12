@@ -34,7 +34,7 @@ const Contact = () => {
             </div>
             <textarea name="message" id="message" placeholder="Your Message" onChange={handleChange} ></textarea>
             <div className="button-container">
-                <button type="submit" >Send</button>
+                <button type="submit">Send</button>
             </div>
         </form>
     );

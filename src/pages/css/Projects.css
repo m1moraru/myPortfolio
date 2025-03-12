@@ -81,3 +81,25 @@
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+@media screen and (max-width: 430px) {
+
+    .projects-container {
+        margin-top: 3.5rem;
+    }
+
+    .projects-container .h1projects {
+        font-size: 3.75rem;
+    }
+
+    .projects-container .h2projects {
+        font-size: 1.5rem;
+        padding-top: 2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+}
+
