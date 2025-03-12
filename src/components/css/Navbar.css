@@ -1,0 +1,230 @@
+.navbar {
+    box-sizing: border-box; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding: 0.9375rem 0rem 0rem 2.5rem;
+    font-size: 1.125rem;
+    height: 6.25rem;
+    width: 100%;
+    z-index: 100;
+    position: relative;
+}
+
+.sidebar {
+    display: none;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+    height: 1.5625rem;
+    width: auto;
+    padding: 0rem 0.9375rem;
+    gap: 0rem;
+    margin-right: 3.125rem;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li Link {
+    text-decoration: none;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 35px;
+    color: #333;
+    font-family: "Comforter Brush", cursive;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 3px;
+    //background: radial-gradient(circle, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 80%);
+    //border-radius: 50%;
+}
+
+/*
+.logo .blue {
+    color: blue;
+}
+
+.logo .yellow {
+    color: yellow;
+}
+
+.logo .red {
+    color: red;
+}
+    */
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 0.625rem;
+}
+
+.nav-links li {
+    padding: 0.3125rem;
+}
+
+.nav-links a {
+    display: inline-block;
+    text-align: center;
+    width: 5.625rem;
+    min-width: 3.75rem;
+    color: black;
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out, font-weight 0.1s;
+}
+
+.nav-links a:hover,
+.nav-links a:active,
+.nav-links a:focus {
+    font-weight: bold;
+}
+
+.nav-links.scrolled {
+    position: fixed;
+    top: -0.875rem;
+    right: -3.125rem;
+    height: 0.625rem;
+    background-color: #333;
+    padding: 0.625rem 0.9375rem;
+    box-shadow: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 1.875rem;
+}
+
+.nav-links.scrolled li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-icons {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar, .nav-links {
+        //display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .logo {
+        display: block;
+    }
+   
+    .menu-icon {
+        position: fixed;
+        display: block;
+        font-size: 3.125rem;
+        cursor: pointer;
+        right: 1.25rem;
+        top: 0.9375rem;
+        z-index: 1001;
+        color: black;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: transparent;
+        padding-top: 3.75rem;
+        z-index: 5000 !important; 
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar button img {
+        height: 3.125rem;
+        width: 3.125rem;
+        margin: 1.25rem;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        list-style: none;
+        padding: 0 0.9375rem;
+        text-align: left;
+        letter-spacing: 0.1563rem;
+        width: 70%;
+        height: 70%;
+        margin-top: 2.5rem;
+    }
+
+    .sidebar li {
+        padding: 1rem;
+        margin-top: 0.625rem;
+        height: 0.625rem;
+        width: auto;
+        align-items: center;
+    }
+
+    .sidebar a {
+        color: white;
+        font-size: 1.1875rem;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .sidebar a:hover {
+        color:rgb(0, 158, 102);
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 0.9375rem;
+        right: 0.9375rem;
+        font-size: 1.375rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(46, 49, 48, 0.9);
+        z-index: 1000;
+    }
+}

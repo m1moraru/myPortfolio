@@ -1,0 +1,38 @@
+.follow-me-container {
+    position: fixed;
+    left: 0.625rem; 
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+    margin-left: 1.25rem;
+}
+
+.follow-text {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    color: #000;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg); 
+}
+
+.divider {
+    width: 0.0625rem;
+    height: 2.5rem;
+    background-color: #000;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; 
+}
+
+.social-icons a img {
+    height: 1.5625rem;
+    width: 1.5625rem;
+}
