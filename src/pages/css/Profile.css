@@ -267,11 +267,11 @@ h2 .caret {
 
     .prf-container .landing .landing-left {
         align-items: flex-start;
-        padding: 0rem 1.25rem;
+        margin: 0;
+        padding: 0rem;
     }
 
     .prf-container .landing {
-        padding-left: 1.875rem;
         margin-top: 1.25rem;
     }
 
@@ -288,10 +288,12 @@ h2 .caret {
         font-size: 1.875rem;
     }
 
-    .prf-container .landing button {
-        width: 8rem;
-        height: 2.5rem;
+    .prf-container .landing .landing-left button {
+        width: 100%;
+        height: 3.125rem;
         font-size: 1rem;
+        border-radius: 0.5rem;
+        font-size: 1.125;
     }
 
     .prf-container .about-left {
@@ -310,22 +312,35 @@ h2 .caret {
 }
 
 @media screen and (max-width: 430px) {
+
+    .prf-container {
+        box-sizing: border-box;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-height: 100vh;
+        width: 100%;
+    }
+    
     .prf-container .landing {
         grid-template-columns: 1fr;
         text-align: center;
-        padding-left: 1rem;
         margin-top: 1rem;
+        padding-left: 5px;
     }
 
     .prf-container .landing .landing-left {
-        align-items: center;
-        padding: 0 1rem;
-        margin-left: 0;
+        align-items: flex-start;
+        margin-left: 10px;
+        width: 90%;
+        height: auto;
+        padding: 5px;
     }
 
     .prf-container .landing h2 {
         font-size: 2rem;
-        text-align: center;
+        text-align: left;
+        width: 100%;
+        line-height: 50px;
     }
 
     .prf-container .landing h2 .typing-text {
@@ -337,8 +352,8 @@ h2 .caret {
     }
 
     .prf-container .landing button {
-        width: 7rem;
-        height: 2.2rem;
+        width: 100%;
+        height: 55px;
         font-size: 0.9rem;
     }
 

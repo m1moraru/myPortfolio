@@ -52,16 +52,17 @@
 @media screen and (max-width: 430px) {
 
     .exp-container {
-        margin-top: 3.5rem;
+        padding: 80px 15px;
     }
 
-    .exp-container h1 {
+    .exp-container .h1experience {
         font-size: 3.75rem;
     }
 
-    .exp-container h2 {
+    .exp-container .h2experience {
         font-size: 1.5rem;
-        padding-top: 2rem;
+        padding-top: 65px;
+        margin-left: -0px;
     }
 }
 
