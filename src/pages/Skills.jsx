@@ -57,7 +57,6 @@ const Skills = ({ className }) => {
 
             <div className="title-container">
                 <h1 className="h1skills">Skills</h1>
-                <h2 className="h2skills">My Skills</h2>
             </div>
 
             <div className="about">

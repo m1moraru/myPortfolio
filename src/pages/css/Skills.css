@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(227, 226, 226);
+    background-color: #ffac6e !important;
 }
 
 .skills {
@@ -11,7 +11,7 @@ body {
     width: 60%;
     margin: 3.125rem auto;
     padding: 1.875rem;
-    background-color: rgb(227, 226, 226);
+    background-color: #ffac6e ;
 }
 
 .skills .about {
@@ -21,14 +21,16 @@ body {
     align-items: center;
     width: 100%;
     padding: 0 1.875rem;
-    background-color: rgb(227, 226, 226);
+    background-color: transparent;
     line-height: 2;
 }
 
 .skills .about p {
     color: #333;
+    font-size: 18px;
     text-align: justify;
     width: 100%;
+    font-weight: 500;
 }
 
 .skills .title-container {
@@ -38,23 +40,12 @@ body {
 }
 
 .skills h1 {
-    font-size: 6.875rem;
-    color: #f5f5f5;
-    text-shadow: 
-         -0.0625rem -0.0625rem 0 #f5f5f5,  
-         0.0625rem -0.0625rem 0 #f5f5f5, 
-         -0.0625rem 0.0625rem 0 #f5f5f5, 
-         -0.0625rem -0.0625rem 0 #b6b6b6;
-    font-weight: 900;
-    margin-top: -0.625rem;
-    letter-spacing: 0.1875rem;
-}
-
-.skills h2 {
+    font-size: 35px;
+    font-weight: 400;
     color: #333;
-    font-size: 2.375rem;
-    font-weight: 700;
-    margin-top: -10rem;
+    //font-family: "Comforter Brush", cursive;
+    margin-top: 40px;
+    letter-spacing: 0.1875rem;
 }
 
 .skills .skills-container {
@@ -63,7 +54,7 @@ body {
     grid-template-columns: repeat(2, 1fr); 
     gap: 0.375rem;
     width: 100%;
-    background: rgb(227, 226, 226);
+    background-color: transparent;
     padding: 0;
 }
 
@@ -104,14 +95,15 @@ body {
 .skill-bar {
     width: 100%;
     height: 0.25rem;
-    background: #ddd;
+    background-color: transparent;
     border-radius: 0.3125rem;
     overflow: hidden;
+    border: 0.1px solid #3d405b;
 }
 
 .skill-level {
     height: 100%;
-    background: rgb(0, 158, 102);
+    background: #3d405b;
     transition: width 1s ease-in-out;
 }
 
@@ -164,17 +156,19 @@ body {
 
 @media screen and (max-width: 430px) {
 
+
     .skills {
         box-sizing: border-box;
         width: 100%; 
         gap: 1.5rem; 
         padding: 80px 15px;
+        margin: 0 0;
     }
 
     .skills .title-container {
         width: 100%;
         height: 75px;
-        //padding: 5px;
+        padding: 5px;
         text-align: center;
     }
 
@@ -216,13 +210,7 @@ body {
     }
 
     .skills .title-container h1 {
-        font-size: 3.75rem;
-    }
-
-    .skills .title-container h2 {
-        font-size: 1.5rem;
-        padding-top: 69px;
-        margin-left: -75px;
+        font-size: 40px;
     }
 }
 

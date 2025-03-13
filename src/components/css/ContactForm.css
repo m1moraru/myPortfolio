@@ -13,6 +13,8 @@
 
 .form-container h1 {
    text-align: left;
+   font-size: 2.1875rem;
+   font-weight: 400;
 }
 
 .form-container .input-container {
@@ -33,19 +35,21 @@
     padding: 0px 0.625rem;
     font-size: 1rem;
     border: 0.1px solid grey; 
+    background-color: whitesmoke;
 }
 
 .form-container  textarea {
     unset: all;
     display: flex;
     justify-content: center;
-    height: 100px;
+    height: 6.25rem;
     width: 90%;
     font-size: 0.875rem;
     padding: 0.3125rem 0.875rem;
     box-sizing: border-box; 
     line-height: 1.5;
     border: 0.1px solid grey; 
+    background-color: whitesmoke;
 }
 
 .form-container  textarea::placeholder {
@@ -68,7 +72,7 @@
     color: white;
     height: 2.8125rem;
     width: 9.375rem;
-    background-color: rgb(0, 158, 102);
+    background-color: #e07a5f;
     margin-top: 1.875rem;
     margin-left: 61%;
     font-size: 1.125rem;

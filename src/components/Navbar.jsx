@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./css/Navbar.css";
+import { useLocation } from "react-router-dom";
 import icon1 from "../assets/linkedin.svg";
 import icon2 from "../assets/github.svg";
 import close_icon from "../assets/window-close.png";
 
 const Navbar = () => {
+
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const location = useLocation();
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -28,9 +31,26 @@ const Navbar = () => {
         };
     }, []);
 
+    const getNavbarStyle = () => {
+        switch (location.pathname) {
+            case "/":
+                return { backgroundColor: "rgb(142, 202, 173)" }; // Profile Page
+            case "/skills":
+                return { backgroundColor: " #ffac6e " }; // Skills Page
+            case "/experience":
+                return { backgroundColor: " #9d9554" }; // Experience Page
+            case "/projects":
+                return { backgroundColor: " #ffde81" }; // Projects Page
+            case "/contact":
+                return { backgroundColor: " #badeda" }; // Contact Page
+            default:
+                return { backgroundColor: "rgb(50, 50, 50)" }; // Default Color
+        }
+    };
+    
     return (
         <>
-            <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
+            <nav className={`navbar ${isScrolled ? "scrolled" : ""}`} style={getNavbarStyle()}>
                 <div className="logo"><span className="blue">MA</span><span className="yellow">RI</span><span className="red">US</span></div>
 
                 <ul className={`nav-links ${isOpen ? "active" : ""} ${isScrolled ? "scrolled" : ""}`}>
@@ -48,7 +68,7 @@ const Navbar = () => {
                 </div>
             )}
 
-           <div className={`sidebar ${isOpen ? "active" : ""}`}>
+           <div className={`sidebar ${isOpen ? "active" : ""}`} style={getNavbarStyle()}>
                 <button className="close-btn" onClick={toggleMenu}><img src={close_icon}></img></button>
                 <ul>
                     <li><Link to="/" onClick={toggleMenu}>Profile</Link></li>

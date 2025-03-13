@@ -6,9 +6,9 @@
     height: 18.75rem;
     width: 18.75rem;
     padding: 2rem;
-    background: transparent;
+    background-color:rgb(249, 207, 38);
     padding: 0.625rem 1.25rem;
-    border: 0.00625rem solid rgba(128, 128, 128, 0.3);
+    border: 0.00625rem solid white;
     border-radius: 0.625rem;
     box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
@@ -73,5 +73,6 @@
         max-width: 100%;
         margin-left: 0.625rem;
         height: 8.75rem;
+        border: 0.1px solid white;
     }
 }

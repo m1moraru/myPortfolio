@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     color: black;
+    background-color: transparent;
     padding: 0.9375rem 0rem 0rem 2.5rem;
     font-size: 1.125rem;
     height: 6.25rem;
@@ -11,6 +12,7 @@
     z-index: 100;
     position: relative;
 }
+
 
 .sidebar {
     display: none;
@@ -145,6 +147,10 @@
     }
 
     .navbar {
+        display: flex;
+    }
+
+    .navbar .nav-links {
         display: none;
     }
 
@@ -197,7 +203,7 @@
     }
 
     .sidebar a {
-        color: white;
+        color: black;
         font-size: 1.1875rem;
         font-weight: 600;
         text-decoration: none;
@@ -226,5 +232,15 @@
         height: 100vh;
         background: rgba(46, 49, 48, 0.9);
         z-index: 1000;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .navbar  {
+        margin-bottom: 0;
+    }
+
+    .navbar .logo {
+        font-size: 30px;
     }
 }

@@ -32,7 +32,6 @@ const Projects = () => {
 
             <div>
                 <h1 className="h1projects">Projects</h1>
-                <h2 className="h2projects">My Projects</h2>
             </div>
             <br />
 
