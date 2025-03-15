@@ -10,20 +10,30 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        const response = await fetch("https://mariusmoraru.com/contact.php", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(formData).toString(),
-        });
-
-        const result = await response.json();
-
-        if (result.success) {
-            alert("Message sent successfully!");
-            setFormData({ name: "", email: "", message: "" });
-        } else {
-            alert("Failed to send message.");
+    
+        try {
+            const response = await fetch("https://mariusmoraru.com/contact.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+            });
+    
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+    
+            const result = await response.json();
+            console.log("Server Response:", result);
+    
+            if (result.success) {
+                alert("Message sent successfully!");
+                setFormData({ name: "", email: "", message: "" });
+            } else {
+                alert("Failed to send message.");
+            }
+        } catch (error) {
+            alert("Failed to send message. Check console for details.");
+            console.error("Fetch Error:", error);
         }
     };
 
