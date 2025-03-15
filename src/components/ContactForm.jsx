@@ -11,7 +11,7 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const response = await fetch("https://yourdomain.com/contact.php", {
+        const response = await fetch("https://mariusmoraru.com/contact.php", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData).toString(),
