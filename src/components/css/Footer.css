@@ -7,6 +7,12 @@
     height: 15.625rem;
     width: 100%;
     border: black;
-    background-color: rgba(143, 144, 143, 0.6);
+    color: white;
 }
 
+@media screen and (max-width: 430px) {
+    .footer {
+        height: 12.5rem;
+        margin-bottom: 0;
+    }
+}

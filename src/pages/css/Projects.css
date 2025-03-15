@@ -1,14 +1,18 @@
 .projects-container {
+    //background: url("/public/images/project-icon.png") no-repeat center left 10%;
+    //background-size: cover;
+    //background-attachment: fixed;
+    //background-position: center top 0px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 0.625rem 1.5625rem;
     position: relative;
     margin: 0;
     padding: 2.5rem;
     min-height: 100vh;
-    background-color: #ffde81;
+    background-color:rgb(255, 222, 129);
 }
 
 .projects-container .h1projects {
@@ -23,13 +27,13 @@
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 1.25rem;
+    gap: 3.125rem;
     justify-content: center; 
     align-items: center;
     max-width: 100%;
     height: auto;
-    margin: 0 auto;
-    margin-top: 5.625rem;
+    margin-top: 0;
+    padding: 2.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -77,6 +81,18 @@
        box-sixing: border-box;
        padding: 3.75rem 0.9375rem;
        margin-top: 0;
+    }
+
+    .projects-container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80%; 
+        height: 100%;
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(16, 15, 15, 0));
+        backdrop-filter: blur(50px); 
+        pointer-events: none;
     }
 
     .projects-container .h1projects {

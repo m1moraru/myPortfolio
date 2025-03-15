@@ -30,6 +30,7 @@ const skillsData = [
 
 const Skills = ({ className }) => {
 
+
     useEffect(() => {
         const skillLevels = document.querySelectorAll(".skill-level");
 
@@ -59,18 +60,6 @@ const Skills = ({ className }) => {
                 <h1 className="h1skills">Skills</h1>
             </div>
 
-            <div className="about">
-                <p>
-                    <span className="capital-i">I</span> specialize in developing scalable, high-performance applications using React, Node.js,
-                    and PostgreSQL, with a strong focus on full-stack development. My expertise spans across front-end and back-end architecture,
-                    ensuring seamless integration between user interfaces and server-side logic.
-                </p>
-                <p>
-                    I have extensive experience in building e-commerce platforms, developing custom business solutions,
-                    and implementing secure authentication systems using OAuth, Passport.js, and session-based authentication.
-                </p>
-            </div>
-
             <div className="skills-container">
                 {skillsData.map((skill, index) => (
                     <div className="skill" key={index}>
@@ -98,6 +87,18 @@ const Skills = ({ className }) => {
             </div>
 
             <div className="about">
+                <p>
+                    <span className="capital-i">I</span> specialize in developing scalable, high-performance applications using React, Node.js,
+                    and PostgreSQL, with a strong focus on full-stack development. My expertise spans across front-end and back-end architecture,
+                    ensuring seamless integration between user interfaces and server-side logic.
+                </p>
+                <p>
+                    I have extensive experience in building e-commerce platforms, developing custom business solutions,
+                    and implementing secure authentication systems using OAuth, Passport.js, and session-based authentication.
+                </p>
+            </div>
+
+            <div className="about bottom">
                 <p>
                     I have extensive experience in building e-commerce platforms, developing custom business solutions,
                     and implementing secure authentication systems using OAuth, Passport.js, and session-based authentication.

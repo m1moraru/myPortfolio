@@ -41,17 +41,16 @@
 
 .logo {
     font-weight: bold;
-    font-size: 35px;
+    font-size: 2.1875rem;
+    margin-top: 1.0625rem;
     color: #333;
     font-family: "Comforter Brush", cursive;
     font-weight: 800;
     font-style: normal;
-    letter-spacing: 3px;
-    //background: radial-gradient(circle, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 80%);
-    //border-radius: 50%;
+    letter-spacing: 0.1875rem;
 }
-
 /*
+
 .logo .blue {
     color: blue;
 }
@@ -63,7 +62,7 @@
 .logo .red {
     color: red;
 }
-    */
+*/
 
 .nav-links {
     display: flex;
@@ -238,9 +237,10 @@
 @media screen and (max-width: 430px) {
     .navbar  {
         margin-bottom: 0;
+        height: 5rem;
     }
 
     .navbar .logo {
-        font-size: 30px;
+        font-size: 1.875rem;
     }
 }

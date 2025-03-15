@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./css/Navbar.css";
-import { useLocation } from "react-router-dom";
-import icon1 from "../assets/linkedin.svg";
-import icon2 from "../assets/github.svg";
 import close_icon from "../assets/window-close.png";
 
 const Navbar = () => {
-
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
@@ -18,64 +14,94 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
+            setIsScrolled(window.scrollY > 50);
         };
-
         window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const getNavbarStyle = () => {
-        switch (location.pathname) {
-            case "/":
-                return { backgroundColor: "rgb(142, 202, 173)" }; // Profile Page
-            case "/skills":
-                return { backgroundColor: " #ffac6e " }; // Skills Page
-            case "/experience":
-                return { backgroundColor: " #9d9554" }; // Experience Page
-            case "/projects":
-                return { backgroundColor: " #ffde81" }; // Projects Page
-            case "/contact":
-                return { backgroundColor: " #badeda" }; // Contact Page
-            default:
-                return { backgroundColor: "rgb(50, 50, 50)" }; // Default Color
-        }
+        return {
+            backgroundColor: location.pathname === "/skills" ? "" :
+                             location.pathname === "/" ? "rgb(142, 202, 173)" :
+                             location.pathname === "/experience" ? "transparent" :
+                             location.pathname === "/projects" ? "#ffde81" :
+                             location.pathname === "/contact" ? "#badeda" :
+                             "rgb(50, 50, 50)",
+
+            color: location.pathname === "/skills" || isScrolled ? "white" : "black",
+            logoColor: location.pathname === "/skills" || isScrolled ? "white" : "#333"
+        };
     };
-    
+
     return (
         <>
             <nav className={`navbar ${isScrolled ? "scrolled" : ""}`} style={getNavbarStyle()}>
-                <div className="logo"><span className="blue">MA</span><span className="yellow">RI</span><span className="red">US</span></div>
+                <div className="logo" style={{ color: getNavbarStyle().logoColor }}>
+                    <span className="blue">MA</span><span className="yellow">RI</span><span className="red">US</span>
+                </div>
 
                 <ul className={`nav-links ${isOpen ? "active" : ""} ${isScrolled ? "scrolled" : ""}`}>
-                    <li><Link to="/" onClick={() => setIsOpen(false)}>Profile</Link></li>
-                    <li><Link to="/skills" onClick={() => setIsOpen(false)}>Skills</Link></li>
-                    <li><Link to="/experience" onClick={() => setIsOpen(false)}>Experience</Link></li>
-                    <li><Link to="/projects" onClick={() => setIsOpen(false)}>Projects</Link></li>
-                    <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+                    <li><Link to="/" style={{ color: isScrolled ? "white" : getNavbarStyle().color }} onClick={() => setIsOpen(false)}>Profile</Link></li>
+                    <li><Link to="/skills" style={{ color: location.pathname === "/skills" || isScrolled ? "white" : "black" }} onClick={() => setIsOpen(false)}>Skills</Link></li>
+                    <li><Link to="/experience" style={{ color: isScrolled ? "white" : getNavbarStyle().color }} onClick={() => setIsOpen(false)}>Experience</Link></li>
+                    <li><Link to="/projects" style={{ color: isScrolled ? "white" : getNavbarStyle().color }} onClick={() => setIsOpen(false)}>Projects</Link></li>
+                    <li><Link to="/contact" style={{ color: isScrolled ? "white" : getNavbarStyle().color }} onClick={() => setIsOpen(false)}>Contact</Link></li>
                 </ul>
             </nav>
 
+            {/* Menu Icon - White only on /skills */}
             {!isOpen && (
-                <div className="menu-icon" onClick={toggleMenu}>
+                <div 
+                    className="menu-icon" 
+                    onClick={toggleMenu}
+                    style={{ color: location.pathname === "/skills" ? "white" : "black" }}
+                >
                     ☰
                 </div>
             )}
 
-           <div className={`sidebar ${isOpen ? "active" : ""}`} style={getNavbarStyle()}>
-                <button className="close-btn" onClick={toggleMenu}><img src={close_icon}></img></button>
+            {/* Sidebar Background & Links for Experience Page */}
+            <div 
+                className={`sidebar ${isOpen ? "active" : ""}`} 
+                style={{ 
+                    backgroundColor: getNavbarStyle().backgroundColor,
+                    color: location.pathname === "/experience" ? "white" : getNavbarStyle().color 
+                }}
+            >
+                <button className="close-btn" onClick={toggleMenu}>
+                    <img src={close_icon} alt="Close" />
+                </button>
                 <ul>
-                    <li><Link to="/" onClick={toggleMenu}>Profile</Link></li>
-                    <li><Link to="/skills" onClick={toggleMenu}>Skills</Link></li>
-                    <li><Link to="/experience" onClick={toggleMenu}>Experience</Link></li>
-                    <li><Link to="/projects" onClick={toggleMenu}>Projects</Link></li>
-                    <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
+                    <li><Link 
+                        to="/" 
+                        style={{ color: location.pathname === "/experience" ? "white" : (isScrolled ? "white" : getNavbarStyle().color) }} 
+                        onClick={toggleMenu}
+                    >Profile</Link></li>
+                    
+                    <li><Link 
+                        to="/skills" 
+                        style={{ color: location.pathname === "/experience" ? "white" : (location.pathname === "/skills" || isScrolled ? "white" : "black") }} 
+                        onClick={toggleMenu}
+                    >Skills</Link></li>
+                    
+                    <li><Link 
+                        to="/experience" 
+                        style={{ color: location.pathname === "/experience" ? "white" : (location.pathname === "/skills" || isScrolled ? "white" : "black") }} 
+                        onClick={toggleMenu}
+                    >Experience</Link></li>
+                    
+                    <li><Link 
+                        to="/projects" 
+                        style={{ color: location.pathname === "/experience" ? "white" : (isScrolled ? "white" : getNavbarStyle().color) }} 
+                        onClick={toggleMenu}
+                    >Projects</Link></li>
+                    
+                    <li><Link 
+                        to="/contact" 
+                        style={{ color: location.pathname === "/experience" ? "white" : (isScrolled ? "white" : getNavbarStyle().color) }} 
+                        onClick={toggleMenu}
+                    >Contact</Link></li>
                 </ul>
             </div>
 
@@ -85,4 +111,10 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+
+
 

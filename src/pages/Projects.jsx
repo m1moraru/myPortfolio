@@ -17,12 +17,12 @@ const Projects = () => {
         },
         {
             title: "E-Commerce Portfolio",
-            description: "An e-commerce app with authentication, payment integration",
+            description: "E-commerce app with authentication, payment integration",
             link: "https://github.com/yourusername/e-commerce-portfolio"
         },
         {
             title: "Taskify",
-            description: "A task management app built with React and Node.js.",
+            description: "Task management app built with React and Node.js.",
             link: "https://taskify-nuog.onrender.com"
         },
     ]

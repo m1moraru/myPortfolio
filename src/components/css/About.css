@@ -10,7 +10,6 @@
     overflow: hidden;
     margin: 0;
     padding: 3.75rem 1.25rem 3.75rem 6.25rem;
-    //background-color: #81b29a;
     background-color: rgb(142, 202, 173);
 }
 
@@ -68,7 +67,7 @@
         text-align: center;
         margin-top: 5rem;
         margin-bottom: -2.5rem; 
-        padding: 30px;
+        padding: 1.875rem;
     }
 
     .about-img {
@@ -87,7 +86,7 @@
     }
 
     .about .about-content .acp {
-        font-size: 17px;
+        font-size: 1.0625rem;
     }
 
     .fade-in {
@@ -113,8 +112,9 @@
     .about {
         grid-template-columns: 1fr;
         text-align: center;
-        margin-top: -30px;
+        margin-top: -1.875rem;
         padding: 1.25rem 0;
+        background-color: white;
     }
 
     .about-img {
@@ -128,7 +128,7 @@
         width: 100%;
         text-align: left;
         align-items: flex-start;
-        padding: 25px;
+        padding: 1.5625rem;
         gap: 1rem;
     }
 

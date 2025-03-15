@@ -3,16 +3,16 @@
     flex-direction: column;
     justify-content: space-around; 
     align-items: center; 
-    height: 18.75rem;
-    width: 18.75rem;
+    height: 15.75rem;
+    width: 15.75rem;
     padding: 2rem;
-    background-color:rgb(249, 207, 38);
+    background-color:rgb(247, 182, 91);
     padding: 0.625rem 1.25rem;
-    border: 0.00625rem solid white;
     border-radius: 0.625rem;
-    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 5, 0.5);
     transition: transform 0.3s ease-in-out;
     text-align: center; 
+    border-top-left-radius: 50px;
 }
 
 .projectCard-container:hover {
@@ -72,7 +72,32 @@
     .projectCard-container {
         max-width: 100%;
         margin-left: 0.625rem;
-        height: 8.75rem;
-        border: 0.1px solid white;
+        height: 200px;
+        justify-content: flex-start;
+        gap: 15px;
+        padding-top: 1.25rem;
+    }
+
+    .projectCard-container .project-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    .projectCard-container .project-title .project-icon {
+        height: 1.875rem;
+        width: 1.875rem;
+        margin-right: 1.25rem;
+    }
+
+    .projectCard-container h2 {
+        font-size: 1.25rem;
+    }
+
+    .projectCard-container p {
+        margin-top: 0;
+        width: 100%;
     }
 }
