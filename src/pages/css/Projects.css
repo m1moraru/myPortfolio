@@ -1,8 +1,4 @@
 .projects-container {
-    //background: url("/public/images/project-icon.png") no-repeat center left 10%;
-    //background-size: cover;
-    //background-attachment: fixed;
-    //background-position: center top 0px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -16,10 +12,9 @@
 }
 
 .projects-container .h1projects {
-    font-size: 2.1875rem;
+    font-size: 1.7rem;
     font-weight: 400;
     color: #333;
-    //font-family: "Comforter Brush", cursive;
     margin-top: 5rem;
     letter-spacing: 0.1875rem;
 }
@@ -51,21 +46,18 @@
 @media screen and (max-width: 768px) {
 
     .projects-container {
-        margin-top: 5rem;
+        display: flex;
+        padding: 3.75rem 0.9375rem;
+        margin-top: 0;
     }
 
     .projects-container .h1projects {
-        font-size: 5rem;
-    }
-
-    .projects-container .h2projects {
-        font-size: 1.75rem;
-        padding-top: 2.5rem;
+        font-size: 2rem;
     }
 
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.25rem;
+        gap: 3.25rem;
     }
 }
 
@@ -78,21 +70,9 @@
 @media screen and (max-width: 430px) {
 
     .projects-container {
-       box-sixing: border-box;
+       display: flex;
        padding: 3.75rem 0.9375rem;
        margin-top: 0;
-    }
-
-    .projects-container::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 80%; 
-        height: 100%;
-        background: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(16, 15, 15, 0));
-        backdrop-filter: blur(50px); 
-        pointer-events: none;
     }
 
     .projects-container .h1projects {
@@ -101,12 +81,14 @@
     }
 
     .projects-container .projects-grid {
+        box-sizing: border-box;
+        display: grid;
         grid-template-columns: repeat(1, 1fr);
-        gap: 1rem;
-        width: 100%;
+        gap: 2rem;
+        width: fit-content;
+        margin: 1.875rem auto; 
         height: auto;
-        padding: 1.25rem 0;
-        margin-top: 1.25rem;
+        padding: 0 2.1875rem;
     }
 }
 

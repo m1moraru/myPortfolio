@@ -96,9 +96,6 @@ const Skills = ({ className }) => {
                     I have extensive experience in building e-commerce platforms, developing custom business solutions,
                     and implementing secure authentication systems using OAuth, Passport.js, and session-based authentication.
                 </p>
-            </div>
-
-            <div className="about bottom">
                 <p>
                     I have extensive experience in building e-commerce platforms, developing custom business solutions,
                     and implementing secure authentication systems using OAuth, Passport.js, and session-based authentication.

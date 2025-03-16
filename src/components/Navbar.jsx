@@ -52,14 +52,35 @@ const Navbar = () => {
 
             {/* Menu Icon - White only on /skills */}
             {!isOpen && (
-                <div 
-                    className="menu-icon" 
-                    onClick={toggleMenu}
-                    style={{ color: location.pathname === "/skills" ? "white" : "black" }}
-                >
-                    ☰
-                </div>
-            )}
+    <div 
+        className="menu-icon" 
+        onClick={toggleMenu}
+        style={{ 
+            color: isScrolled || location.pathname === "/projects" || location.pathname === "/contact" 
+                ? "black" 
+                : location.pathname === "/skills" 
+                ? "white" 
+                : "black",
+            backgroundColor: isScrolled 
+                ? "rgb(142, 202, 173)"  
+                : location.pathname === "/profile" 
+                ? "rgb(142, 202, 173)" 
+                : location.pathname === "/skills" 
+                ? "rgba(0, 0, 0, 0.8)" 
+                : location.pathname === "/projects" 
+                ? "rgb(255, 222, 129)" 
+                : location.pathname === "/contact" 
+                ? "#badeda" 
+                : "transparent",
+            padding: "12px 3px",
+            borderRadius: "10px",
+            transition: "background 0.3s ease-in-out, color 0.3s ease-in-out"
+        }}
+    >
+        ☰
+    </div>
+)}
+
 
             {/* Sidebar Background & Links for Experience Page */}
             <div 

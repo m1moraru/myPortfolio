@@ -15,16 +15,6 @@ const Projects = () => {
             description: "Description of Project 2",
             link: "https://github.com/m1moraru/mariusMoraru/tree/main/project2"
         },
-        {
-            title: "E-Commerce Portfolio",
-            description: "E-commerce app with authentication, payment integration",
-            link: "https://github.com/yourusername/e-commerce-portfolio"
-        },
-        {
-            title: "Taskify",
-            description: "Task management app built with React and Node.js.",
-            link: "https://taskify-nuog.onrender.com"
-        },
     ]
 
     return (

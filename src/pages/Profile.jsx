@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import "./css/Profile.css";
 import About from "../components/About";
 import icon1 from "../assets/linkedin.svg";
@@ -60,7 +61,9 @@ const Profile = () => {
                         <br />
                         <span className="ht">I make the complex simple</span>
                     </h2>
-                    <button>Get In Touch</button>
+                    <button>
+                        <Link to="/contact" className="custom-link" >Get In Touch</Link>
+                    </button>
                 </div>
             </div>
 

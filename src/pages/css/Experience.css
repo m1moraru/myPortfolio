@@ -18,13 +18,13 @@
 }
 
 .exp-container .exp-content .h1experience {
-    font-size: 25px;
+    font-size: 1.5625rem;
     font-weight: 400;
     color: #333;
     letter-spacing: 0.1275rem;
     width: 80%;
-    padding-top: 20px;
-    height: 60px;
+    padding-top: 1.25rem;
+    height: 3.75rem;
     text-align: center;
     color: white;
 }
@@ -34,7 +34,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 500px;
+    height: 31.25rem;
     width: 80%;
     background: rgba(0, 0, 0, 0.6);
 }
@@ -42,9 +42,12 @@
 @media screen and (max-width: 768px) {
 
     .exp-container {
-        margin-top: 5rem;
+        padding: 0px 0.9375rem;
+        margin-top: 0;
+        overflow: hidden;
+        background-color: transparent;
     }
-
+    
     .exp-container h1 {
         font-size: 5rem;
     }

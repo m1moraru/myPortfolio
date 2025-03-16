@@ -240,7 +240,19 @@
         height: 5rem;
     }
 
+    .menu-icon {
+        height: 60px;
+        width: 60px;
+        text-align: center;
+        padding-bottom: 5px;
+        border-radius: 10px; 
+        cursor: pointer;
+        //background-color: white;
+        margin-top: -5px;
+    }
+
     .navbar .logo {
         font-size: 1.875rem;
+        margin-top: 30px;
     }
 }

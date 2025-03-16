@@ -69,7 +69,6 @@ h2 .caret {
     justify-content: flex-start;
     align-items: flex-start;
     background-color:rgb(142, 202, 173);
-    //background-color: rgb(227, 226, 226);
     min-height: 100vh;
     width: 100%;
     padding: 0rem 0.625rem;
@@ -155,6 +154,18 @@ h2 .caret {
     background-color: rgb(1, 126, 82);
 }
 
+.custom-link {
+    text-decoration: none; 
+    color: inherit; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+}
+
 .landing img {
     height: 23.125rem;
     width: 18.75rem;
@@ -172,7 +183,9 @@ h2 .caret {
 }
 
 .prf-container .about-container {
-    margin-top: 2.5rem;
+    box-sizing: border-box;
+    margin-top: 3.6rem;
+    margin-left: -10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -268,10 +281,19 @@ h2 .caret {
         display: none;
     }
 
+    .prf-container {
+        box-sizing: border-box;
+    }
+
+
     .prf-container .landing .landing-left {
+        box-sizing: border-box;
+        justify-content: center;
         align-items: flex-start;
-        margin: 0;
-        padding: 0rem;
+        width: 80%;
+        height: 50%;
+        margin-left: 6.875rem;
+        padding: 0 1.25rem;
     }
 
     .prf-container .landing {
@@ -279,25 +301,25 @@ h2 .caret {
     }
 
     .prf-container .landing h2 {
-        font-size: 2.5rem;
         text-align: left;
+        line-height: 1.5;
     }
 
     .prf-container .landing h2 .typing-text {
-        font-size: 2.8125rem;
+        font-size: 3.125rem;
     }
 
     .prf-container .landing .landing-left .ht {
-        font-size: 1.875rem;
+        font-size: 2.1875rem;
     }
 
     .prf-container .landing .landing-left button {
-        width: 100%;
-        height: 3.125rem;
-        font-size: 1rem;
+        width: 55%;
+        height: 3.75rem;
         border-radius: 0.5rem;
         font-size: 1.125;
     }
+
 
     .prf-container .about-left {
         width: 100%;
@@ -349,7 +371,7 @@ h2 .caret {
     }
 
     .prf-container .landing h2 .typing-text {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .prf-container .landing .landing-left .ht {
@@ -362,10 +384,23 @@ h2 .caret {
         font-size: 1.25rem;
     }
 
+    .custom-link {
+        text-decoration: none; 
+        color: inherit; 
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 80%;
+        height: 80%;
+        text-align: center;
+        font-size: 1.5625rem; 
+    }
+
     .prf-container .about-container {
         flex-direction: column;
         height: auto;
-        text-align: center;
+        text-align: center; 
     }
 
     .prf-container .about-left {

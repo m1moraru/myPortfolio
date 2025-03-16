@@ -1,7 +1,7 @@
 
 .skills {
-    background: url("/public/images/pexels-mati.png") no-repeat center left 10%;
-    background-size: 150%;
+    background: url("/public/images/skills-icon3.webp") no-repeat center left 10%;
+    background-size: cover;
     background-attachment: fixed;
     background-position: center top 0px;
     box-sizing: border-box;
@@ -12,7 +12,7 @@
     width: 100%;
     background-size: cover;
     background-attachment: fixed;
-    margin-top: -100px;
+    margin-top: -6.25rem;
 }
 
 .skills .about {
@@ -22,28 +22,17 @@
     align-items: center;
     width: 60%;
     height: auto;
-    padding: 1.25rem 10% 0;
+    padding: 1.25rem 5% 0;
     line-height: 2;
-    background-color: rgba(0, 0, 0, 0.6);
-    margin-top: 0;
+    background-color: rgba(255, 255, 255, 0.82);
+    margin: 0 0 1.875rem;
 }
-
-.skills .bottom {
-    margin-bottom: -3.125rem;
-    z-index: 100;
-    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3); 
-    clip-path: inset(0px -0px -0px -0px);
-    margin-bottom: 1.25rem;
-    padding-bottom: 1.25rem;
-}
-
 
 .skills .about p {
-    color: rgb(217,217,217);
+    color: black;
     font-size: 1.0625rem;
     text-align: justify;
     width: 100%;
-    font-weight: 500;
 }
 
 .skills .title-container {
@@ -51,14 +40,14 @@
     justify-content: center;
     height: 6.25rem;
     width: 60%;
-    margin-top: 250px;
+    margin-top: 150px;
     padding: 0.1875rem 0;
     margin-bottom: 0;
   
 }
 
 .skills h1 {
-    font-size: 35px;
+    font-size: 1.1875rem;
     font-weight: 400;
     margin-top: 2.5rem;
     letter-spacing: 0.1875rem;
@@ -73,6 +62,7 @@
     width: 60%;
     padding: 3.75rem 0;
     margin: 0; 
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .skill {
@@ -108,7 +98,7 @@
     align-items: center;
     width: 80%;
     margin: -0.625rem;
-    padding-right: 10px;
+    padding-right: 0.625rem;
 }
 
 .skill-bar {
@@ -129,134 +119,210 @@
 @media screen and (max-width: 768px) {
 
     .skills {
-        background: url("/public/images/pexels-mati.png") no-repeat center left 10%;
-        background-size: 150%;
-        background-attachment: fixed;
-        background-position: center top 0px;
-        margin-top: 5rem;
-        width: 88%;
-        gap: 2.1875rem;
-    }
-
-    .skills .capital-i {
-        font-weight: 500;
-        padding-left: 1.875rem;
-    }
-
-    .skills .about {
-        width: 95%;
-        text-align: justify;
-        padding: 0;
-        margin: 0.625rem auto;
-        border-left: none;
-        font-size: 1rem;
-    }
-
-    .skills .about p {
-        margin: 0.625rem;
-    }
-
-    .skills-container {
-        grid-template-columns: repeat(1, 1fr); 
-        width: 100%;
-        margin: 15px auto;
-        padding: 0.625rem;
-    }
-
-    .skills-container .skill {
-        padding: 0.5rem;
-    }
-
-    .skills h1 {
-        font-size: 5rem;
-    }
-
-    .skills h2 {
-        font-size: 1.75rem;
-        padding-top: 2.8125rem;
-    }
-}
-
-@media screen and (max-width: 430px) {
-    .skills {
-        background: url("/public/images/pexels-mati.png") no-repeat center left 10%;
-        background-size: 150%;
-        background-attachment: fixed;
-        background-position: center top 0px;
         box-sizing: border-box;
         width: 100%; 
+        height: auto;
         gap: 1.5rem; 
         padding: 0px 0;
         background-color: rgb(0, 0, 0);
         overflow: hidden;
-        margin: -5rem 0px;
+    }
+    
+    .skills > * {
+        position: relative;
+        z-index: 2;
     }
   
     .skills .title-container {
-        width: 100%;
+        width: 98%;
         height: auto;
         padding: 0.3125rem;
         text-align: center;
         justify-content: center;
-        margin-top: 11.875rem;
+        margin-top: 7.5rem;
         margin-bottom: -1.25rem;
         border-top-left-radius: 2.5rem;
         border-top-right-radius: 2.5rem;
     }
 
     .skills .about {
-        width: 90%;
+        width: 96%;
         text-align: justify;
-        padding: 0.625rem 0.9375rem;
+        padding: 3.625rem 1.9375rem;
         font-size: 0.9375rem; 
-        background-color: rgba(0, 0, 0, 0.6); 
-        border-radius: 0.5rem;
+        background-color: white;
     }
 
     .skills .about p {
-        margin: 0.5rem;
-        font-size: 1rem;
-        line-height: 1.6rem;
-        color: rgb(217,217,217);
+        margin: 0 0.4rem;
+        font-size: 18px;
+        line-height: 1.8;
+        color: #333;
+    }
+
+    .skills .about .capital-i {
+        vertical-align: baseline;
+        margin-left: 2.5rem;
     }
 
     .skills .skills-container {
+        box-sizing: border-box;
         display: grid;
         grid-template-columns: repeat(1, 1fr); 
         gap: 0.625rem;
         width: 95%;
         height: auto;
         padding: 3.125rem 0.9375rem;
-        background-color: rgba(0, 0, 0, 0.8); 
-        border-radius: 2.5rem;
+        background-color: none;
     }
 
     .skills-container .skill {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
-        padding: 0.5rem o.75rem;
+        justify-content: space-around;
+        padding: 0.5rem 0;
         border-radius: 0.3125rem;
-        margin-left: 0.9375rem;
+        width: 100%;
     }
 
     .skills-container .skill-data-container {
         width: 75%;
     }
 
+    .skills-container .skill .skill-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.5rem; 
+        height: 2.5rem;
+        background: rgb(255, 255, 255); 
+        border-radius: 20px; 
+        backdrop-filter: blur(3px); 
+        box-shadow: 0.125rem 0.125rem 0.625rem rgba(255, 255, 255, 0.1); 
+    }
+    
     .skills-container .skill .skill-img img {
         height: 1.6875rem;
         width: 1.6875rem;
+        filter: contrast(1.2) brightness(1.1); 
     }
+    
 
     .skills .title-container h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 500;
         padding-left: 1.5625rem;
     }
 
     .skills .bottom {
-        margin-bottom: 6.25rem;
+        margin: -40px 0 6.25rem;
     }
+}
+
+@media screen and (max-width: 430px) {
+    .skills {
+        box-sizing: border-box;
+        width: 100%; 
+        gap: 1.5rem; 
+        padding: 0px 0;
+        background-color: rgb(0, 0, 0);
+        overflow: hidden;
+        margin: -5rem 0px 0px;
+    }
+
+    .skills::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6); 
+        z-index: 1;
+    }
+    
+    .skills > * {
+        position: relative;
+        z-index: 2;
+    }
+  
+    .skills .title-container {
+        width: 98%;
+        height: auto;
+        padding: 0.3125rem;
+        text-align: center;
+        justify-content: center;
+        margin-top: 130px;
+        margin-bottom: -1.25rem;
+        border-top-left-radius: 2.5rem;
+        border-top-right-radius: 2.5rem;
+    }
+
+    .skills .about {
+        width: 96%;
+        text-align: justify;
+        padding: 1.625rem 1.9375rem;
+        font-size: 0.9375rem; 
+        background-color: white;
+        margin-top: -1.5625rem;
+    }
+
+    .skills .about p {
+        margin: 0 0.4rem;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        color: #333;
+    }
+
+    .skills .skills-container {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 0.625rem;
+        width: 96%;
+        height: auto;
+        padding: 3.125rem 0.9375rem;
+        background-color: none;
+    }
+
+    .skills-container .skill {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0.5rem 0;
+        border-radius: 0.3125rem;
+        width: 100%;
+    }
+
+    .skills-container .skill-data-container {
+        width: 75%;
+    }
+
+    .skills-container .skill .skill-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.5rem; 
+        height: 2.5rem;
+        background: rgb(255, 255, 255); 
+        border-radius: 20px; 
+        backdrop-filter: blur(3px); 
+        box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1); 
+    }
+    
+    .skills-container .skill .skill-img img {
+        height: 1.6875rem;
+        width: 1.6875rem;
+        filter: contrast(1.2) brightness(1.1); 
+    }
+    
+
+    .skills .title-container h1 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding-left: 1.5625rem;
+    }
+
 }
