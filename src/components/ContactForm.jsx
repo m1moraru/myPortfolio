@@ -39,6 +39,15 @@ const Contact = () => {
 
     return (
         <>
+        <div className="title-container">
+            <h1 className="contact-title">Let's build something amaizing together.</h1>
+            <p>
+                Bringing ideas to life through high-quality web development. 
+                I offer end-to-end development solutions, 
+                from frontend design to backend architecture, ensuring seamless performane
+                and a user-friendly experience.
+            </p>
+        </div>
         <form className="form-container" id="contact-form" onSubmit={handleSubmit}>
             <h1>Get in touch</h1>
             <div className="input-container">

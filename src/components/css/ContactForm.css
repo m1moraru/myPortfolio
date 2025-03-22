@@ -1,3 +1,8 @@
+
+.title-container {
+    display: none;
+}
+
 .form-container {
     box-sizing: border-box; 
     display: flex;
@@ -13,7 +18,7 @@
 
 .form-container h1 {
    text-align: left;
-   font-size: 1.7rem;
+   font-size: 1.4rem;
    font-weight: 400;
 }
 
@@ -137,8 +142,28 @@
         width: 99%;
     }
 
+    .title-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: left; 
+        height: 100px;
+        width: 100%; 
+        margin-top: 120px;
+        padding-left: 20px;
+    }
+
+    .contact-title {
+        font-size: 19px;
+    }
+
+    .title-container p {
+        font-size: 16px;
+    }
+
     .form-container h1 {
-        font-size: 1.3625rem;
+        font-size: 1.1625rem;
     }
 
     .form-container .input-container {
