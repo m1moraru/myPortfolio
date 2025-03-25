@@ -1,12 +1,12 @@
 import React from "react";
 import "../components/css/About.css"; 
-import me_img from "../assets/me.webp"
+import me_img from "../assets/profile-img.webp"
 
 const About = () => {
     return (
         <div className="about">
             <div className="about-img">
-                <img src={"#"} alt="#" />
+                <img src={me_img} alt="#" />
             </div>
 
             <div className="about-content">
