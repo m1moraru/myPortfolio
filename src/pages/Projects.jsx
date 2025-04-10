@@ -8,7 +8,7 @@ const Projects = () => {
         {
             title: "Project 1",
             description: "Description of Project 1",
-            link: "https://github.com/m1moraru/mariusMoraru/tree/main/project1"
+            link: " https://mariusmoraru.com/project1/"
         },
         {
             title: "Project 2",
