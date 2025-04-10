@@ -6,9 +6,9 @@ const Projects = () => {
 
     const projects = [
         {
-            title: "Project 1",
-            description: "Description of Project 1",
-            link: " https://mariusmoraru.com/project1/"
+            title: "Gazetteer",
+            description: "Gazetteer mobile-first web application that provides detailed geographic, demographic, climatic, and economic information about countries worldwide.",
+            link: "https://mariusmoraru.com/gazetteer/"
         },
         {
             title: "Project 2",
