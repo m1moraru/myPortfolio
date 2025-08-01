@@ -255,5 +255,25 @@
         font-size: 1.875rem;
         margin-top: 30px;
     }
-    
+
+    .sidebar .follow-me-container {
+        display: flex !important;
+        flex-direction: column;
+        bottom: auto;
+        top: 150px;
+        left: 76%;
+        transform: translateX(-50%);
+    }
+    .follow-me-container .follow-text {
+        font-size: 0.8rem;
+    }
+    .sidebar .follow-me-container .divider {
+        width: 0.01rem;
+        height: 2.5rem;
+    }
+    .follow-me-container .social-icons img {
+        margin-bottom: 10px;
+        height: 26px;
+        width: 26px;
+    }
 }

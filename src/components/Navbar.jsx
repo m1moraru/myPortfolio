@@ -3,6 +3,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./css/Navbar.css";
 import Footer from "../components/Footer";
 import close_icon from "../assets/window-close.svg";
+import icon1 from "../assets/linkedin.svg";
+import icon2 from "../assets/github.png";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -242,7 +244,17 @@ const Navbar = () => {
                             Contact
                         </Link>
                     </li>
+
                 </ul>
+
+                <div className="follow-me-container">
+                    <span className="follow-text">Follow Me</span>
+                    <hr className="divider" />
+                    <div className="social-icons">
+                    <a href="https://www.linkedin.com/in/marius-iulian-moraru-3b7641312/"><img src={icon1} alt="LinkedIn icon" /></a>
+                    <a href="https://github.com/m1moraru"><img src={icon2} alt="GitHub icon" /></a>
+                    </div>
+                </div>
                 
             </div>
 
