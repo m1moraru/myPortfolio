@@ -1,81 +1,95 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import "./css/Profile.css";
 import About from "../components/About";
+import Experience from "../components/Experience";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+import ContactForm from "../components/ContactForm";
+import Footer from "../components/Footer";
 import icon1 from "../assets/linkedin.svg";
 import icon2 from "../assets/github.svg";
-
-const texts = ["I am Developer", "I am UX Designer"];
+import upArrow from "../assets/up-arrow.png"; // <- add an up-arrow icon to your assets
 
 const Profile = () => {
-    const [displayText, setDisplayText] = useState("");
-    const [isDeleting, setIsDeleting] = useState(false);
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [textIndex, setTextIndex] = useState(0);
-    const typingSpeed = 100;
-    const caretRef = useRef(null);
+  const [showArrow, setShowArrow] = useState(false);
 
-    useEffect(() => {
-        const currentText = texts[currentIndex].slice(4); 
-        setDisplayText(`I am ${currentText.slice(0, textIndex)}`);
+  // Show arrow when user scrolls down
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowArrow(true);
+      } else {
+        setShowArrow(false);
+      }
+    };
 
-        if (isDeleting) {
-            if (textIndex > 0) {
-                setTimeout(() => setTextIndex((prev) => prev - 1), typingSpeed);
-            } else {
-                setIsDeleting(false);
-                setCurrentIndex((prev) => (prev + 1) % texts.length);
-            }
-        } else {
-            if (textIndex < currentText.length) {
-                setTimeout(() => setTextIndex((prev) => prev + 1), typingSpeed);
-            } else {
-                setTimeout(() => setIsDeleting(true), 1000);
-            }
-        }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-        if (caretRef.current) {
-            caretRef.current.style.visibility = "visible";
-            caretRef.current.style.animation = "blink-caret 0.75s step-end infinite";
-        }
-    }, [textIndex, isDeleting, currentIndex]);
+  // Scroll back to top
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-    return (
-        <div className="prf-container">
-
-            <div className="follow-me-container">
-                <span className="follow-text">Follow Me</span>
-                <hr className="divider" />
-                <div className="social-icons">
-                    <a href="#"><img src={icon1} alt="LinkedIn icon" /></a>
-                    <a href="#"><img src={icon2} alt="GitHub icon" /></a>
-                </div>
-            </div>
-
-            <div className="landing">
-                <div className="landing-left">
-                    <h2>
-                        <span className="ht">Hi There!</span>
-                        <br />
-                        <span className="typing-text">{displayText}</span><span ref={caretRef} className="caret"> |</span> 
-                        <br />
-                        <span className="ht">I make the complex simple</span>
-                    </h2>
-                    <button>
-                        <Link to="/contact" className="custom-link" >Get In Touch</Link>
-                    </button>
-                </div>
-            </div>
-
-            <div className="about-container">
-                <div className="about-component">
-                    <About />
-                </div>
-                <div className="about-left">
-                </div>
-            </div>
+  return (
+    <div className="prf-container" id="profile-section">
+      <div className="follow-me-container">
+        <span className="follow-text">Follow Me</span>
+        <hr className="divider" />
+        <div className="social-icons">
+          <a href="https://www.linkedin.com/in/marius-iulian-moraru-3b7641312/"><img src={icon1} alt="LinkedIn icon" /></a>
+          <a href="https://github.com/m1moraru"><img src={icon2} alt="GitHub icon" /></a>
         </div>
-    );
+      </div>
+
+      <div className="landing">
+        <div className="landing-left">
+          <h2>
+            <span className="typing-text">DESIGN <span className="ht3">vision,</span></span><br />
+            <span className="typing-text1">DEVELOP <span className="ht3">ideas,</span></span><br />
+            <span className="typing-text2">DEPLOY <span className="ht3">excellence,</span></span>
+          </h2>
+          <span className="ht2">
+            <span className="ht4">Full Stack Web Developer | Specializing in the PERN stack</span>
+          </span>
+          <button>
+            <a href="#contact-section" className="custom-link">Get In Touch</a>
+          </button>
+        </div>
+      </div>
+
+      <div className="about-container">
+        <div className="about-component" id="about-section">
+          <About />
+        </div>
+        <div className="fixed-skills" id="skills-section">
+          <Skills />
+        </div>
+        <div className="experience" id="experience-section">
+          <Experience />
+        </div>
+        <div id="projects-section">
+          <Projects />
+        </div>
+        <div className="contact" id="contact-section">
+          <ContactForm />
+        </div>
+        <div></div>
+      </div>
+      <Footer />
+
+      {/* Floating Arrow */}
+      {showArrow && (
+        <button className="back-to-top" onClick={scrollToTop}>
+          <img src={upArrow} alt="Back to top" />
+        </button>
+      )}
+    </div>
+  );
 };
 
 export default Profile;
+
+
+

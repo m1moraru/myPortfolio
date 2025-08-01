@@ -1,0 +1,152 @@
+.skills-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 4rem 6rem;
+  align-items: center;
+  background: #eeeeee;
+}
+
+/* Left Section */
+.skills-block-left h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.skills-block-left p {
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.skills-block-highlight {
+  color: #f95f21;
+}
+
+.skills-block-tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.skills-block-tab-btn {
+  padding: 0.6rem 1.2rem;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.skills-block-tab-btn.active {
+  background: #f95f21;
+  color: white;
+  border: none;
+}
+
+/* Right Section */
+.skills-block-right {
+  width: 100%;
+}
+
+.skills-block-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.skills-block-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  position: relative;
+}
+
+.skills-block-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.skills-tooltip {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.skills-block-icon-inline {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: grayscale(30%);
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.skills-block-icon-inline:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+/* Bar container + animated bar */
+.skills-block-bar-wrapper {
+  width: 100%;
+  background: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skills-block-bar {
+  height: 3px;
+  background: #f95f21;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .skills-block {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .skills-block-tabs {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 430px) {
+
+  .skills-block {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    text-align: left;
+    padding: 2rem 2rem 4rem;
+    margin-top: -1rem;
+  }
+
+  .skills-block-tabs {
+    justify-content: space-between;
+  }
+
+  .skills-block-tab-btn {
+    color: #000;
+    border: 0.5px solid ;
+  }
+
+  .skills-block-left h1 {
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+  }
+}
+
+

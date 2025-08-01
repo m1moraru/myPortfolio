@@ -8,6 +8,7 @@
     width: 100%;
     border: black;
     color: white;
+    z-index: 1;
 }
 
 @media screen and (max-width: 430px) {
